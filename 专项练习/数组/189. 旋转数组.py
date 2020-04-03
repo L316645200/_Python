@@ -23,10 +23,37 @@ class Solution:
         """
         Do not return anything, modify nums in-place instead.
         """
-        nums[:k], nums[k:] = nums[len(nums)-k:], nums[:len(nums) - k]
+        nums[:] = nums[len(nums)-k:] + nums[:len(nums) - k]
+        # nums[:k], nums[k:] = nums[len(nums) - k:], nums[:len(nums) - k]
 
 
-l = [1, 2]
-k = 0
+class Solution:
+    def rotate(self, nums: List[int], k: int) -> None:
+        """
+        Do not return anything, modify nums in-place instead.
+        """
+        nums[:] = nums[::-1]
+        k = k % len(nums)
+        nums[:k] = nums[:k][::-1]
+        nums[k:] = nums[k:][::-1]
+
+
+class Solution:
+    def rotate(self, nums: List[int], k: int) -> None:
+        """
+        Do not return anything, modify nums in-place instead.
+        """
+        l = len(nums)
+        num = [0] * l
+        k = k % l
+        for i in range(k):
+            num[i] = nums[l - k + i]
+        for i in range(l - k):
+            num[i + k] = nums[i]
+
+
+# 暴力法懒得写了
+l = [1,2,3,4,5,6,7]
+k = 3
 s = Solution()
 print(s.rotate(l, k))
