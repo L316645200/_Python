@@ -1,6 +1,4 @@
 
-来源：力扣（LeetCode）
+### 个人代码笔记
 
-链接：https://leetcode-cn.com/problems/contains-duplicate
-
-著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
+### 出现题号的为来源力扣（LeetCode）的原题
