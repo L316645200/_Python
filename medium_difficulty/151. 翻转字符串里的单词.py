@@ -18,3 +18,11 @@
 # 进阶：
 # 请选用 C 语言的用户尝试使用 O(1) 额外空间复杂度的原地解法。
 
+
+class Solution:
+    def reverseWords(self, s: str) -> str:
+        s.split('')
+
+
+s = "a good   example"
+print(s.split(' '))
