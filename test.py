@@ -25,3 +25,16 @@ a = [i * i for i in range(n)]
 print(a)
 
 
+
+s = [1, 2, 3, 4, 5]
+
+
+def add(x, y):
+    return x + y
+
+
+m = map(add, s, s)
+for i in m:
+    print(i)
+
+

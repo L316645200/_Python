@@ -21,7 +21,7 @@
 
 class Solution:
     def reverseWords(self, s: str) -> str:
-        s.split('')
+        return ' '.join(s.split()[::-1])
 
 
 s = "a good   example"
