@@ -34,6 +34,7 @@ class Solution2:
             return False
         else:
             return True
+        # return len(set(nums)) != len(nums)
 
 
 class Solution3:
