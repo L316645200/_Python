@@ -25,16 +25,17 @@ a = [i * i for i in range(n)]
 print(a)
 
 
+print()
+print()
+print()
 
-s = [1, 2, 3, 4, 5]
+l = [["1", "1", "1", "1", "0"], ["1", "1", "0", "1", "0"], ["1", "1", "0", "0", "0"], ["0", "0", "0", "0", "0"]]
 
+for i in l:
+    i[:0] = ['0']
+    i.append('0')
+l[:0] = [['0'] * len(l[0])]
+l.append(['0'] * len(l[0]))
 
-def add(x, y):
-    return x + y
-
-
-m = map(add, s, s)
-for i in m:
+for i in l:
     print(i)
-
-
