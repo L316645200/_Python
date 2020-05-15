@@ -39,4 +39,6 @@ for card in sorted(deck, key=spades_high):  # doctest: +ELLIPSIS
     pass
 
 # 目前FrenchDeck不支持洗牌
-# print(shuffle(deck))
+# print(shuffle(deck._cards))
+# print(deck._cards)
+# 因为这摞牌是不可 变的（immutable）：卡牌和它们的位置都是固定的，除非我们破坏 这个类的封装性，直接对 _cards 进行操作。

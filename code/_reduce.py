@@ -13,3 +13,17 @@ def counter(c, n):
 l = l[0] + l[1] + l[2] + l[3]
 print(l)
 print(reduce(counter, l))
+
+
+# 自己写reduce
+def my_reduce(func, lst):
+    s = 0
+
+    for l in lst:
+        s += func(l)
+
+    return s
+
+
+print(l)
+print(reduce(counter, l))

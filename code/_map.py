@@ -31,3 +31,26 @@ def examples(storage_type):
 print(examples(storage_type))
 
 
+# 自己写map
+def my_map(func, lst):
+    map_list = []
+
+    for l in lst:
+        map_list.append(func(l))
+
+    return map_list
+
+s = [1, 2, 3, 4, 5]
+m = my_map(add, s, s)
+for i in m:
+    print(i)
+
+# 自己写filter
+def my_filter(func, lst):
+    filter_list = []
+
+    for l in lst:
+        if func(l):
+            filter_list.append(l)
+
+    return filter_list
