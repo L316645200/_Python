@@ -26,7 +26,7 @@ def triangle(n):
         m += 1
 
 
-gen = triangle(10)
+gens = triangle(10)
 
-for i in gen:
+for i in gens:
     print(i)

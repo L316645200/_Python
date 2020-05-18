@@ -1,5 +1,5 @@
 import time
-from example.fun_time import func_time
+from examples.fun_time import func_time
 
 # 斐波那契
 # 递归

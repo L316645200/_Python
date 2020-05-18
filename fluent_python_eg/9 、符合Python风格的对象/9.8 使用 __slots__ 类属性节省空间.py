@@ -2,6 +2,8 @@
 # 我喜欢使用元组，因为这样定义的 __slots__ 中所含 的信息不会变化，如示例 9-11 所示。
 
 # 示例 9-11 vector2d_v3_slots.py：只在 Vector2d 类中添加了 __slots__ 属性
+import math
+from array import array
 
 
 class Vector2d:
