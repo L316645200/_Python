@@ -47,3 +47,36 @@
 # # 只需要根据以上规则，验证已经填入的数字是否有效即可。
 # # 给定数独序列只包含数字 1-9 和字符 '.' 。
 # # 给定数独永远是 9x9 形式的。
+from typing import List
+
+
+class Solution:
+    def isValidSudoku(self, board: List[List[str]]) -> bool:
+        rows = [{} for n in range(9)]
+        columns = [{} for n in range(9)]
+        box = [{} for n in range(9)]
+        for i in range(9):
+            for j in range(9):
+                if board[i][j] != '.':
+                    box_index = (i // 3) * 3 + j // 3
+
+                    rows[i][board[i][j]] = rows[i].get(board[i][j], 0) + 1
+                    columns[j][board[i][j]] = columns[j].get(board[i][j], 0) + 1
+
+                    box[box_index][board[i][j]] = box[box_index].get(board[i][j], 0) + 1
+
+                    if rows[i][board[i][j]] > 1 or columns[j][board[i][j]] > 1 or box[box_index][board[i][j]] > 1:
+                        return False
+        return True
+
+t = [["5", "3", ".", ".", "7", ".", ".", ".", "."],
+     ["6", ".", ".", "1", "9", "5", ".", ".", "."],
+     [".", "9", "8", ".", ".", ".", ".", "6", "."],
+     ["8", ".", ".", ".", "6", ".", ".", ".", "3"],
+     ["4", ".", ".", "8", ".", "3", ".", ".", "1"],
+     ["7", ".", ".", ".", "2", ".", ".", ".", "6"],
+     [".", "6", ".", ".", ".", ".", "2", "8", "."],
+     [".", ".", ".", "4", "1", "9", ".", ".", "5"],
+     [".", ".", ".", ".", "8", ".", ".", "7", "9"]]
+s = Solution()
+print(s.isValidSudoku(t))
